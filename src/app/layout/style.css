@@ -1,3 +1,22 @@
-.App {
-  text-align: center;
+body {
+  background-color: #eaeaee;
+}
+
+.ui.inverted.top.fixed.menu {
+  background-image: linear-gradient(
+    135deg,
+    rgb(24, 42, 115)
+    0%,
+    rgb(33, 138, 174)
+    69%,
+    rgb(32, 167, 172)
+    89%
+  );
+}
+.ui.container.main{
+  margin-top: 3em;
+}
+
+.ui.inverted.menu .item:before{
+  background: rgba(0,0,0,0);
 }
