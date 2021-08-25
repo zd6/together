@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import {
   List,
   Icon,
@@ -45,7 +46,7 @@ export default function EventListItem({ event, selectEvent, deleteEvent }) {
           content='Delete'
         />
         <Button
-          onClick={() => selectEvent(event)}
+          as = {Link} to = {`/events/${event.id}`}
           color='teal'
           floated='right'
           content='View'

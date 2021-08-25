@@ -1,26 +1,31 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import 'semantic-ui-css/semantic.min.css';
-import './app/layout/style.css';
-import App from './app/layout/App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom";
+import "semantic-ui-css/semantic.min.css";
+import "./app/layout/style.css";
+import App from "./app/layout/App";
+import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter } from "react-router-dom";
 
 // Enable hot dynamic update to the page
 
-const rootElement = document.getElementById('root');
+const rootElement = document.getElementById("root");
 
-function render(){
-  ReactDOM.render(<App />, rootElement)
+function render() {
+  ReactDOM.render(
+    <BrowserRouter>
+      <App />
+    </BrowserRouter>,
+    rootElement
+  );
 }
 
 if (module.hot) {
-  module.hot.accept('./app/layout/App', function() {
+  module.hot.accept("./app/layout/App", function () {
     setTimeout(render);
-  })
+  });
 }
 
 render();
-
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
