@@ -22,6 +22,7 @@ export default function NavBar({ setFormOpen }) {
           Together
         </Menu.Item>
         <Menu.Item as={NavLink} to='/events' name='Events' />
+        <Menu.Item as={NavLink} to='/sandbox' name='Sandbox' />
         <Menu.Item>
           <Button
             onClick={() => setFormOpen(true)}
